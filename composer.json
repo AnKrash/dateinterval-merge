@@ -1,0 +1,14 @@
+{
+    "name": "requestum/test-task-merge",
+    "description": "Date intervals merge task task boilerplate.",
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "authors": [
+        {
+            "name": "Sergey Stavichenko",
+            "email": "sergey.stavichenko@gmail.com"
+        }
+    ],
+    "require": {}
+}
