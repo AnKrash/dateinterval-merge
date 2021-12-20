@@ -10,5 +10,7 @@
             "email": "sergey.stavichenko@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+    "phpunit/phpunit" : "9.2.2"
+    }
 }
