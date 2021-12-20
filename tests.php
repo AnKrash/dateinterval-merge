@@ -83,7 +83,7 @@ class MergeTest extends TestCase
     /** @dataProvider dataProvider */
     public function testMerge($input, $output) {
         $actualOutput = merge($input);
-        $this->assertSame($output, $actualOutput);
+        $this->assertSame($actualOutput,$output );
     }
 
     public function testBigVolume() {
