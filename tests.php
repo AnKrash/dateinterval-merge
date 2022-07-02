@@ -33,8 +33,8 @@ class MergeTest extends TestCase
             ],
             // output
             [
-                ['2021-03-24 12:00:00', '2021-03-24 15:00:00'],
                 ['2021-03-23 12:00:00', '2021-03-23 15:00:00'],
+                ['2021-03-24 12:00:00', '2021-03-24 15:00:00'],
             ]
         ],
         // case 2 - no intersections
@@ -65,8 +65,8 @@ class MergeTest extends TestCase
             ],
             // output
             [
-                ['2021-03-24 12:00:00', '2021-03-24 15:00:00'],
                 ['2021-03-23 12:00:00', '2021-03-23 16:00:00'],
+                ['2021-03-24 12:00:00', '2021-03-24 15:00:00'],
             ]
         ],
         // case 4 - empty input
@@ -81,12 +81,14 @@ class MergeTest extends TestCase
     ];
 
     /** @dataProvider dataProvider */
-    public function testMerge($input, $output) {
+    public function testMerge($input, $output)
+    {
         $actualOutput = merge($input);
-        $this->assertSame($actualOutput,$output );
+        $this->assertSame($actualOutput, $output);
     }
 
-    public function testBigVolume() {
+    public function testBigVolume()
+    {
         $input = $output = [];
         $startDate = new \DateTime('2021-05-05 6:00');
         $endDate = new \DateTime('2021-05-05 6:45');
@@ -128,7 +130,8 @@ class MergeTest extends TestCase
         $this->assertLessThan(2, $evalTime);
     }
 
-    public function dataProvider() {
+    public function dataProvider()
+    {
         return static::CASES;
     }
 }
